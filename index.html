@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Form Validation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #8e9ebd;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            width: 460px;
+            margin: auto;
+            background-color:white;
+            overflow: hidden;
+        }
+        .Header h2{
+            text-align: center;
+            font-size: 45px;
+            padding: 20px;
+            padding-bottom: 2px;
+        }
+        .form {
+            padding: 20px 30px;
+        }
+        .form-control {
+            margin-bottom: 10px;
+            padding-bottom: 20px;
+            position: relative;
+        }
+
+        .form-control label{
+            display: block;
+            font-size: 30px;
+            margin-bottom: 5px;
+        }
+
+        .form-control input{
+            display: block;
+            height: 40px;
+            width: 100%;
+            font-size: 18px;
+        }
+        
+        form button{
+            display: block;
+            width: 100%;
+            background-color: red;
+            color: white;
+            text-align: center;
+            margin-left: 0px;
+            margin-top: 5px;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: larger;
+        }
+        
+        .form-control i {
+            position: absolute;
+            right: 10px;
+            top: 40px;
+            visibility: hidden;
+        }
+        .form-control small {
+            position: absolute;
+            left: 0;
+            margin-top: 5px;
+            visibility: hidden;
+        }
+
+        .form-control.success input {
+            border-color: rgb(48, 207, 48);
+            border-width: 2.5px;
+        }
+        .form-control.success .fa-check-circle {
+            visibility: visible;
+            color: rgb(48, 207, 48);
+        }
+        .form-control.error input {
+            border-color: red;
+        }
+        .form-control.error .fa-exclamation-circle {
+            color: red;
+            visibility: visible;
+        }
+        .form-control.error small {
+            visibility: visible;
+            color: red;
+            font-size: 15px;
+        }   
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="Header">
+            <h2>Create Account</h2>
+            <hr />
+        </div>
+        <form class="form" id="form">
+            <div class="form-control">
+                <label for="username">
+                Username<br /><input type="text" id="username" placeholder="Enter UserName">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error Msg</small>
+                </label>
+            </div>
+            <div class="form-control">
+            <label for="email-id">
+                Email Id<br /><input type="email" id="email-id" placeholder="Enter Email-id">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error Msg</small>
+            </label>
+            </div>
+            <div class="form-control">
+            <label for="password1">
+                Password<br /><input type="password" id="password1" placeholder="Enter Password">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error Msg</small>
+            </label>
+            </div>
+            <div class="form-control">
+            <label for="password2">
+                Re-Enter Password<br /><input type="password" id="password2" placeholder="Enter Re-Password">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error Msg</small>
+            </label>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="./info.js"></script>
+</body>
+</html>
